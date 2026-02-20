@@ -3,13 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-  "build": "turbo build",
-  "dev": "turbo dev",
-  "dev:web": "pnpm --filter @apps/web dev",
-  "dev:api": "pnpm --filter @apps/api dev",
-  "lint": "turbo lint",
-  "format": "prettier --write \"**/*.{ts,tsx,md}\""
-},
+    "build": "turbo build",
+    "dev": "turbo dev",
+    "dev:web": "pnpm --filter @apps/web dev",
+    "dev:api": "pnpm --filter @apps/api dev",
+    "lint": "turbo lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
   "devDependencies": {
     "@workspace/eslint-config": "workspace:*",
     "@workspace/typescript-config": "workspace:*",
