@@ -42,9 +42,11 @@ app.delete("/:id", async (c) => {
   return c.json({ success: true })
 })
 
-serve({
-  fetch: app.fetch,
-  port: 3000
-})
+// serve({
+//   fetch: app.fetch,
+//   port: 3000
+// })
 
-console.log('Backend running on http://localhost:3000')
+// console.log('Backend running on http://localhost:3000')
+
+export default app

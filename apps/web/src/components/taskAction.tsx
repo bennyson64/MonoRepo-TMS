@@ -14,7 +14,7 @@ export function TaskActions({ task }: { task: Task }) {
 
   const deleteMutation = useMutation({
     mutationFn: async () => {
-      const res = await fetch(`"https://mono-repo-tms-api.vercel.app/"${task.id}`, {
+      const res = await fetch(`https://mono-repo-tms-api.vercel.app/${task.id}`, {
         method: "DELETE",
       })
       if (!res.ok) throw new Error("Request failed")
@@ -29,7 +29,7 @@ export function TaskActions({ task }: { task: Task }) {
   const updateMutation = useMutation({
     mutationFn: async () => {
       const { id, ...body } = editedTask
-      const res = await fetch(`"https://mono-repo-tms-api.vercel.app/"${id}`, {
+      const res = await fetch(`https://mono-repo-tms-api.vercel.app/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
