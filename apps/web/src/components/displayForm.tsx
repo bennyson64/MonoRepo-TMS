@@ -10,9 +10,9 @@ type Task = {
 export default function DisplayForm() {
   const { data: tasks = [], isLoading, error } = useQuery({
     queryKey: ["tasks"],
-    //https://taskmanagement-system-backend.vercel.app/
+    //https://mono-repo-tms-api.vercel.app/
     queryFn: async () => {
-      const res = await fetch("https://taskmanagement-system-backend.vercel.app/");
+      const res = await fetch("https://mono-repo-tms-api.vercel.app/");
       if (!res.ok) throw new Error("Request failed")
       return res.json() as Promise<Task[]>;
     },

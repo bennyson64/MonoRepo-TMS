@@ -30,9 +30,9 @@ export function BugReportForm() {
   })
   const queryClient = useQueryClient()
   const {mutateAsync} = useMutation({
-    //https://taskmanagement-system-backend.vercel.app/
+    //https://mono-repo-tms-api.vercel.app/
     mutationFn: async (data: z.infer<typeof formSchema>) => {
-      const res = await fetch("https://taskmanagement-system-backend.vercel.app/", {
+      const res = await fetch("https://mono-repo-tms-api.vercel.app/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
